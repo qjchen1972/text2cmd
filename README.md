@@ -1,6 +1,6 @@
 # text2cmd
 
-## Configure and download some large models that support Chinese(optional)
+# Configure and download some large models that support Chinese(optional)
 
 * chagpt
   
@@ -22,7 +22,7 @@
   3.  Possible troubles: install bitsandbytes-0.40.1 in windows
       pip install https://github.com/jllllll/bitsandbytes-windows-webui/releases/download/wheels/bitsandbytes-0.40.1.post1-py3-none-win_amd64.whl
 
-## test
+# test
 
 $ python test_text2cmd.py
   
