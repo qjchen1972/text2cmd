@@ -12,12 +12,14 @@ load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 class PostQuery:
     
-    def __init__(self, template_path, template_name, use='gpt'):        
+    def __init__(self, template_path, template_name, usemodel):        
         
         self.template = Environment(
            loader=FileSystemLoader(template_path)
         ).get_template(template_name)  
         
+        self.model = usemodel
+        '''
         if use == 'gpt':
             self.model = Gpt()
         elif use == 'glm':
@@ -26,6 +28,7 @@ class PostQuery:
             self.model = Baichuan()
         else:
             raise Exception("model init Error")
+        '''    
             
     def count_token(self, text: str) -> int:
         encoding = tiktoken.get_encoding("cl100k_base")

@@ -7,7 +7,8 @@ if __name__ == "__main__":
     
     path = './template_prompt'
     name = 'post_wav_prompt.txt'
-    pq = PostQuery(path, name, use='baichuan')    
+    usemodel = tc.Gpt()
+    pq = PostQuery(path, name, usemodel=usemodel)    
     
     start = time.time() 
     question = 'du huo miao xie mei nv de shi ge'
