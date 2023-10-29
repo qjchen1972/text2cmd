@@ -44,8 +44,8 @@ class PostQuery:
             assert False, message
         return text       
         
-    def post_proc(self, txt):    
-        prompt = self.render_with_token_limit(question=txt)
+    def post_proc(self, **kwargs):    
+        prompt = self.render_with_token_limit(**kwargs)
         res = self.model.post_proc(prompt)
         return res        
         

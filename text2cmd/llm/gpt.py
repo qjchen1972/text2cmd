@@ -23,7 +23,7 @@ class Gpt:
             txt = completion.choices[0].message['content']
             txt = txt.encode('unicode_escape').decode('unicode_escape')
         except Exception as e:
-            print('chatgpt is timeout')
+            print(e)
             txt = ''        
         return txt            
         
